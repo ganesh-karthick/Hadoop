@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+	    <servlet-name>RemoteApi</servlet-name>
+	    <servlet-class>com.google.apphosting.utils.remoteapi.RemoteApiServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Searchengine_webapp</servlet-name>
+		<servlet-class>searchengine.webapp.Searchengine_webappServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>FileContentServer</servlet-name>
+		<servlet-class>searchengine.webapp.FileContentServerServlet</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>SuggestionsServer</servlet-name>
+		<servlet-class>searchengine.webapp.SuggestionsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>fileupload</servlet-name>
+		<servlet-class>searchengine.webapp.WordLocationUploaderServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>RemoteApi</servlet-name>
+	    <url-pattern>/remote_api</url-pattern>
+	</servlet-mapping>
+	 
+	<servlet-mapping>
+		<servlet-name>FileContentServer</servlet-name>
+		<url-pattern>/filequery</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Searchengine_webapp</servlet-name>
+		<url-pattern>/searchquery</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Searchengine_webapp</servlet-name>
+		<url-pattern>/search.html</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SuggestionsServer</servlet-name>
+		<url-pattern>/suggestionsquery</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>fileupload</servlet-name>
+		<url-pattern>/fileupload</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>search.html</welcome-file>
+	</welcome-file-list>
+</web-app>
