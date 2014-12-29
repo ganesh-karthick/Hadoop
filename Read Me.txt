@@ -1,0 +1,1 @@
+Implements Search engine for guttenberg free books. Indexing is done using Apache Hadoop using TF-IDF algorithm.Built index is stored using Datastore in Google App engine  hosted at http://guttenberginstantsearch.appspot.com/ .
